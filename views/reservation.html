@@ -1,0 +1,117 @@
+<script>
+
+	////////////////////////////////////////////////////////////////////////
+	//    A Java script to allow the user to pick date.                   //
+	//    citation for a copyright added in                               //
+	//    the worksCited.txt file                                         //
+	////////////////////////////////////////////////////////////////////////
+
+	webshim.setOptions('forms', {
+		lazyCustomMessages: true,
+		replaceValidationUI: true,
+		addValidators: true
+	});
+
+	webshim.activeLang('en-US');
+
+	(function(){
+		var stateMatches = {
+			'true': true,
+			'false': false,
+			'auto': 'auto'
+		};
+		var enhanceState = (location.search.match(/enhancelist\=([true|auto|false|nopolyfill]+)/) || ['', 'auto'])[1];
+
+		webshim.ready('jquery', function(){
+			$(function () {
+				$('.polyfill-type select')
+						.val(enhanceState)
+						.on('change', function () {
+							location.search = 'enhancelist=' + $(this).val();
+						})
+				;
+			});
+		});
+		webshim.setOptions('forms', {
+			customDatalist: stateMatches[enhanceState]
+		});
+		webshim.setOptions('forms-ext', {
+			replaceUI: stateMatches[enhanceState]
+		});
+	})();
+
+
+	// load the forms polyfill
+	webshim.polyfill('forms forms-ext');
+</script>
+
+
+<form action="#" method="post">
+
+	<label>First Name:</label>
+	<input type="text" name="first_name" id="first_name" placeholder="Enter your First Name..." required/>
+
+	<label>Last Name:</label>
+	<input type="text" name="last_name" id="last_name" placeholder="Enter your Last Name" required/>
+
+	<label>Email:</label>
+	<input type="email" name="email" id="email" placeholder="Enter your E-mail" required/>
+
+	<label>Phone Number:</label>
+	<input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx" required/>
+
+	<label>Date of Reservation:</label>
+	<input type="date" name="date" id="date" placeholder="MM/DD/YYYY" required>
+
+	<label>Time of Reservation:</label>
+	<select name="time" id="time" required>
+		<option value="9:00AM">9:00AM</option>
+		<option value="9:30AM">9:30AM</option>
+		<option value="10:00AM">10:00AM</option>
+		<option value="10:30AM">10:30AM</option>
+		<option value="11:00AM">11:00AM</option>
+		<option value="11:30AM">11:30AM</option>
+		<option value="12:00PM">12:00PM</option>
+		<option value="12:30PM">12:30PM</option>
+		<option value="1:00PM">1:00PM</option>
+		<option value="1:30PM">1:30PM</option>
+		<option value="2:00PM">2:00PM</option>
+		<option value="2:30PM">2:30PM</option>
+		<option value="3:00PM">3:00PM</option>
+		<option value="3:30PM">3:30PM</option>
+		<option value="4:00PM">4:00PM</option>
+		<option value="4:30PM">4:30PM</option>
+		<option value="5:00PM">5:00PM</option>
+		<option value="5:30PM">5:30PM</option>
+		<option value="6:00PM">6:00PM</option>
+		<option value="6:30PM">6:30PM</option>
+		<option value="7:00PM">7:00PM</option>
+		<option value="7:30PM">7:30PM</option>
+		<option value="8:00PM">8:00PM</option>
+		<option value="8:30PM">8:30PM</option>
+		<option value="9:00PM">9:00PM</option>
+		<option value="9:30PM">9:30PM</option>
+
+	</select>
+
+	<br>
+ 	<label>Guests:</label>
+	<select name="guests" id="guests" required>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option> 
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9plus">9+</option>
+	</select>
+
+	<center>
+		<input type="submit" value="Submit"/>
+	</center>
+</form>
+
+
+

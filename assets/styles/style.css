@@ -1,0 +1,356 @@
+/*---------------------------------------------------
+/* CSS for body
+---------------------------------------------------*/
+body{
+}
+
+#innerBody{ 
+  padding-left: 60px; 
+  padding-right: 60px; 
+}
+
+
+
+/*---------------------------------------------------
+/* boarder and header
+---------------------------------------------------*/
+/* ff6600 */
+#top, #bottom, #left, #right {
+  background: #29a329;
+  position: fixed;
+  }
+  #left, #right {
+    top: 0; bottom: 0;
+    width: 12px;
+    }
+    #left { left: 0; }
+    #right { right: 0; }
+    
+  #top, #bottom {
+    left: 0; right: 0;
+    height: 12px;
+    }
+    #top { top: 0; }
+    #bottom { bottom: 0; }
+
+#header{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#logo{
+  width: 100%;
+  max-width: 200px;
+}
+
+.picture{
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/*---------------------------------------------------
+/* Text options
+---------------------------------------------------*/
+hr{
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  border-left: 10%;
+  border-right: 10%;
+  max-width: 900px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #e6e6e6;
+}
+
+p, h3{
+  text-align: center;
+}
+
+a, p, input, label, select{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h3, #h3{
+  font-family: 'Cabin', sans-serif;
+  color: #e08806;
+}
+
+.blockText{
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blockText p, #press h3{
+  text-align: left;
+}
+
+a{
+  text-decoration:none;
+}
+
+
+
+/*---------------------------------------------------
+/* Social media icons
+---------------------------------------------------*/
+#grubhub{
+  margin-bottom: 0px;
+  max-width: 60px;
+}
+
+#social{
+  display: inline;
+  margin: auto;
+}
+
+img.social{
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
+  vertical-align: middle;
+}
+
+#facebook{
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+/*---------------------------------------------------
+/* Reservation form
+---------------------------------------------------*/
+form{
+  width: 100%;
+  max-width: 600px;
+  height: 650px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+}
+
+label{
+  font-size: 16px; 
+  font-weight: bold;
+  margin-left: 15px;
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+input, select{
+  font-size: 16px;
+  text-align: left;
+  width: 94%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  outline: none;
+  border: 1px solid #999999;
+  border-radius: 3px;
+}
+
+select{
+  width: 100px;
+  text-align: center;
+}
+
+input[type="submit"]{
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-color:#000000;
+  color: #ffffff; 
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+
+}
+
+input[type="submit"]:hover{
+  background-color: #333333;
+}
+
+
+
+/*---------------------------------------------------
+/* Hours and location page 
+---------------------------------------------------*/
+.opening-times div{
+  width: 100%;
+}
+
+#hours{
+  margin-top: 0px;
+}
+
+.opening-times h3{
+  margin-bottom: 5px
+}
+
+ul.location{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 600px;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+ul.location li{
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+ul.location li iframe{
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  padding-left: 20px;
+}
+
+
+
+/*---------------------------------------------------
+/* Navigation bar
+---------------------------------------------------*/
+nav{
+  top: 12px;
+  position: fixed;
+  background-color: #ffffff;
+  opacity: 0.95;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+}
+
+nav ul{
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+nav ul li{
+  display: inline-block;
+  float: center;
+}
+
+nav a:link, nav a:visited {
+  height: 15px;
+  line-height: 15px;
+  width: auto;
+  font-weight: bold;
+  color: #737373;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+nav a:hover, nav a:active{
+  color: #e08806;
+}
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#drop{
+  display: none;
+}
+
+label.toggle{
+  display: none;
+}
+
+
+
+/*---------------------------------------------------
+/* Dynamic page code
+---------------------------------------------------*/
+@media only screen and (max-width: 700px){
+
+  #innerBody{ 
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+
+  ul.location li iframe{
+    padding-left: 0px;
+  }
+
+  nav label{
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: 30px;
+  }
+
+  nav label.toggle{
+    width: 100%;
+    display: block;
+    color: #737373;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+   }
+
+  .toggle + a, .menu{ 
+    display: none;
+  }
+
+  .toggle:hover{ 
+    color: #e08806; 
+  }
+
+  [id^=drop]:checked + ul{ 
+    display: block; 
+  }
+
+  nav ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  input{
+    width: 87%;
+  }
+}
